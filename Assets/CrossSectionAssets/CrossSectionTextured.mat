@@ -54,6 +54,6 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - Plane_Normal: {r: 0, g: 1, b: 0, a: 0}
+    - Plane_Normal: {r: 0, g: -1, b: 0, a: 0}
     - Plane_Position: {r: 0, g: 1.09, b: 0, a: 0}
   m_BuildTextureStacks: []
