@@ -33,9 +33,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Fresnel_Power: 2
+    - Fresnel_Power: 1
     m_Colors:
     - Plane_Normal: {r: 0, g: -1, b: 0, a: 0}
-    - Plane_Position: {r: 0, g: 1.09, b: 0, a: 0}
-    - _Color: {r: 0, g: 1, b: 0.6511245, a: 0}
+    - Plane_Position: {r: 0, g: 1.16, b: 0, a: 0}
+    - _Color: {r: 0, g: 0.8696909, b: 1, a: 0}
   m_BuildTextureStacks: []
