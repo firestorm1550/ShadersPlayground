@@ -34,16 +34,30 @@ public class CutAwayController : MonoBehaviour
     {
         foreach (MeshRenderer fresnel in _fresnels)
         {
-            fresnel.material.SetColor(Color, fresnelColor);
-            fresnel.material.SetFloat(FresnelPower, fresnelPower);
-            fresnel.material.SetVector(PlaneNormal, planeNormal);
-            fresnel.material.SetVector(PlanePosition, planePosition);
+            Material[] materials = fresnel.materials;
+
+            foreach (Material material in materials)
+            {
+                material.SetColor(Color, fresnelColor);
+                material.SetFloat(FresnelPower, fresnelPower);
+                material.SetVector(PlaneNormal, planeNormal);
+                material.SetVector(PlanePosition, planePosition);
+            }
+            
+            fresnel.materials = materials;
         }
 
         foreach (MeshRenderer texturedMeshRenderer in _textured)
         {
-            texturedMeshRenderer.material.SetVector(PlaneNormal, planeNormal);
-            texturedMeshRenderer.material.SetVector(PlanePosition, planePosition);
+            Material[] materials = texturedMeshRenderer.materials;
+
+            foreach (Material material in materials)
+            {
+                material.SetVector(PlaneNormal, planeNormal);
+                material.SetVector(PlanePosition, planePosition);
+            }
+            
+            texturedMeshRenderer.materials = materials;
         }
     }
     public void CheckForNewCutawayShadersInChildren()
